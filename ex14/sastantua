@@ -1,0 +1,60 @@
+#!/bin/python3
+import sys
+
+def line_len(size):
+	width = 1
+	floor_step = 4
+	for floor in range(1, size + 1):
+		width += 2 * (2 + floor)
+		floor += 1
+		width += floor_step
+		if floor % 2 and floor < size:
+			floor_step += 2
+	width -= floor_step
+	return (width)
+
+def build_spc(space):
+	for pos in range(0, space):
+		print(" ", end="")
+		pos += 1
+
+def build_lvl(size, floor, width, step):
+	door = 1 + 2 * ((floor - 1) // 2)
+	for pos in range(0, width):
+		if pos == 0:
+			print("/", end="")
+		elif pos == width - 1:
+			print("\\", end="")
+		else:
+			if floor == size and pos >= (width - door) // 2 \
+				and pos < (width + door) // 2 and 2 + floor - step <= door:
+				if door >= 5 and step == 2 + floor - door // 2 - 1 \
+					and pos == (width + door) // 2 - 2:
+					print("$", end="")
+				else:
+					print("|", end="")
+			else:
+				print("*", end="")
+		pos += 1
+
+def main():
+	width = 1
+	size = int(sys.argv[1])
+
+	for floor in range(1, size + 1):
+		height = 2 + floor;
+		for step in range(0, height):
+			width += 2
+			build_spc((line_len(size) - width) // 2)
+			build_lvl(size, floor, width, step)
+			print()
+			step += 1
+		floor += 1
+		width += 4 + 2 * ((floor - 2) // 2)
+
+if __name__ == '__main__':
+	if len(sys.argv) != 2:
+		sys.exit("Usage: ./sastantua.py <number>")
+	if not isinstance(int(sys.argv[1]), int):
+		sys.exit("Usage: ./sastantua.py <number>")
+	main()
