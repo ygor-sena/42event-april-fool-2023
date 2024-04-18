@@ -22,7 +22,7 @@ The early demo of ChatGPT on November 30, 2022, took the world by a storm. Catas
 
 Through a series of exercises, the event gave its opinion about the matter. The exercises made the students explore contemporary problems and API updates beyond ChatGPT's training scope, which ended in September, 2021. Thus, the exercises encouraged the students to try different programming languages. I myself had to write solutions in Shell Script, C, Python, Perl and PHP.
 
-This experience the underscored the importance of robust programming skills alongside AI assistance. It emphasized that while AI enhances technical problem-solving capabilities, our human creativity and analytical skills remain indispensable. Last but not least, humans jokes are far better than AI generated ones.
+This experience underscored the importance of robust programming skills alongside AI assistance. It emphasized that while AI enhances technical problem-solving capabilities, our human creativity and analytical skills remain indispensable. Last but not least, human jokes are far better than AI generated ones.
 
 
 ### 🚀 About the exercises and their solutions 
@@ -60,7 +60,7 @@ The task here was to write a C program that calculates the value of a blackjack 
 This exercise asked the students to write a C program that accepts strings as argument and prints them in a rectangular frame, one string per line. If no strings are provided (`argc` is 1), then nothing should be displayed.
 
 ##### ✅ Exercise 10
-This is the one I had the most fun doing it! This exercise gave the student a bunch of encrypted messages, totalizing 7 of them. The following encryption were used:
+This is the one I had the most fun doing it! This exercise gave the student a bunch of encrypted messages, totalizing 7 of them. The following encryptions were used:
 - rot42
 - Base64
 - Atbash
@@ -68,6 +68,7 @@ This is the one I had the most fun doing it! This exercise gave the student a bu
 - Nato phonetic
 - leet
 - Playfair with the key PLAYFAIR
+
 To find the solution, I used the websites listed in the next section to employ a trial-and-error approach. I also collaborated with my colleagues on Slack to tackle the challenging problems and find the solutions together.
 
 If you want to try it yourself, here are the 7 encrypted messages:
